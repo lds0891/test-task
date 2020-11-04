@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>TEST TASK</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--Logo-->
+  <link rel="shortcut icon" href="images/logo-title.png" type="image/png">
+  <!--library-->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  <!--fonts-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <!-- build:css css/combined.css -->
+  <link rel="stylesheet" href="./css/vendors.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- endbuild -->
+</head>
+
+<body>
+  <!--Header-->
+  <header class="header">
+    <nav class="container header__body">
+      <!--Logotype-->
+      <a class="header__logo" href="/">
+        <img class="header__logo-img" src="./images/logo.png" alt="logotype">
+      </a>
+      <!--Menu-->
+      <div class="header__nav">
+        <!--Modal window-->
+        <div class="modal-btn">
+          <button class="modal-btn__open" id="modalOpen" type="button">AREA RISERVATA</button>
+          <img class="modal-btn__icon" src="./images/lock.png" alt="lock">
+        </div>
+        <!--Btn mobile menu-->
+        <button class="header__toogler" type="button" data-target="#menuMobile">
+          <span class="header__toogler-icon"></span>
+          <span class="header__toogler-icon"></span>
+          <span class="header__toogler-icon"></span>
+        </button>
+        <!--Nav menu-->
+        <ul class="nav-menu" id="menuMobile">
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#" title="HOMEk">HOME</a>
+          </li>
+          <li class="nav-menu__item" id="dropMenuShow"><span class="nav-menu__drop-name" title="AZIENDA">AZIENDA</span>
+            <!--Drop menu-->
+            <ul class="menu-drop" id="dropMenu">
+              <li class="menu-drop__item"><a class="menu-drop__link" href="#" title="STORIA">STORIA</a></li>
+              <li class="menu-drop__item"><a class="menu-drop__link" href="#" title="MM DESIGN">MM DESIGN</a></li>
+              <li class="menu-drop__item"><a class="menu-drop__link" href="#" title="DESIGNER">DESIGNER</a></li>
+              <li class="menu-drop__item"><a class="menu-drop__link" href="#" title="CERTIFICAZIONI">CERTIFICAZIONI</a></li>
+            </ul>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#" title="COLLEZIONI">COLLEZIONI</a>
+          </li>
+          <li class="nav-menu__item" >
+            <a class="nav-menu__link" href="#" title="NEWS">NEWS</a>
+          </li>
+          <li class="nav-menu__item">
+            <a class="nav-menu__link" href="#" title="CONTATTI">CONTATTI</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!--Modal window-->
+  <div class="modal-window" id="modalForm">
+    <div class="modal-window__body">
+      <h3 class="modal-window__title">AREA RISERVATA</h3>
+      <button class="modal-btn__close" id="modalClose" type="button">
+        <span class="modal-btn__close-icon"></span>
+        <span class="modal-btn__close-icon"></span>
+      </button>
+      <div class="modal-window__inner">
+        <div class="modal-window__col">
+          <h4 class="modal-window__col-title">ACCEDI</h4>
+          <div class="form-item form-item_modal">
+            <input class="form-item__input form-item__input_modal" placeholder="E-mail" type="text">
+            <input class="form-item__input form-item__input_modal" placeholder="Password" type="password">
+            <button class="btn-form btn-form_margin" type="button">ACCEDI</button>
+            <a class="form-item__link" href="#">Password dimenticata</a>
+          </div>
+        </div>
+        <div class="modal-window__col">
+          <h4 class="modal-window__col-title">REGISTRATI</h4>
+          <div class="form-item form-item_modal">
+            <input class="form-item__input form-item__input_modal form-item__input_margin" placeholder="Nome" type="text">
+            <input class="form-item__input form-item__input_modal form-item__input_margin" placeholder="Cognome" type="text">
+            <input class="form-item__input form-item__input_modal form-item__input_margin" placeholder="E-mail" type="text">
+            <input class="form-item__input form-item__input_modal form-item__input_margin" placeholder="Password" type="password">
+            <div class="checkbox-item checkbox-item_margin">
+              <input class="checkbox-item__input" type="checkbox" id="agreeModal" name="personalData">
+              <label class="checkbox-item__label" for="agreeModal">Acconsento al trattamento dei dati</label>
+            </div>
+            <div class="checkbox-item checkbox-item_margin">
+              <input class="checkbox-item__input" type="checkbox" id="newsModal" name="personalData">
+              <label class="checkbox-item__label" for="newsModal">Mi iscrivo alla Newsletter</label>
+            </div>
+            <button class="btn-form" type="button">ISCRIVITI</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Slider-->
+  <div class="projects main-content">
+    <div class="slider">
+      <div class="slider__item">
+        <img class="slider__img" src="./images/slide.png" alt="product">
+      </div>
+      <div class="slider__item">
+        <img class="slider__img" src="./images/slide.png" alt="product">
+      </div>
+      <div class="slider__item">
+        <img class="slider__img" src="./images/slide.png" alt="product">
+      </div>
+    </div>
+    <div class="projects-product">
+      <div class="projects-product__item">
+        <h1 class="projects-product__title">Lampadari contemporanei</h1>
+        <p class="projects-product__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+      </div>
+    </div>
+    <div class="container projects-services">
+      <button class="projects-services__btn" type="button">
+        <img class="projects-services__icon" src="./images/shevron.png" alt="button">
+      </button>
+      <div class="projects-services__inner" id="servicesPanel">
+        <div class="projects-services__panel">
+          <button class="services-btn services-btn__prev" id="servicesPrev" type="button"><i class="fas fa-chevron-left"></i></button>
+          <button class="services-btn services-btn__next" id="servicesNext" type="button"><i class="fas fa-chevron-right"></i></button>
+          <div class="projects-services__item active" data-number="1">
+            <h2 class="projects-services__title">Stai pensando ad un progetto?</h2>
+            <div class="projects-services__content">
+              <p class="projects-services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+              <a href="#" class="projects-services__link">Approfondisci</a>
+            </div>
+          </div>
+          <div class="projects-services__item projects-services__item_light" data-number="2">
+            <h2 class="projects-services__title">Vi aspettiamo alla fiera Euroluce</h2>
+            <div class="projects-services__content">
+              <p class="projects-services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+              <a href="#" class="projects-services__link projects-services__link_hover">Approfondisci</a>
+            </div>
+          </div>
+          <div class="projects-services__item projects-services__item_dark" data-number="3">
+            <h2 class="projects-services__title">Scopri la nuova collezione</h2>
+            <div class="projects-services__content">
+              <p class="projects-services__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor dolore</p>
+              <a href="#" class="projects-services__link projects-services__link_color">Approfondisci</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Footer-->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-info">
+        <div class="footer-info__column">
+              <div class="item-info">
+                <h5 class="item-info__title">
+                  Lampadari made in italy
+                </h5>
+                <p class="item-info__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                </p>
+              </div>
+            </div>
+        <div class="footer-info__column">
+              <div class="item-info">
+                <h5 class="item-info__title">
+                  lampadari artigianali
+                </h5>
+                <p class="item-info__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                </p>
+              </div>
+            </div>
+        <div class="footer-info__column">
+              <div class="item-info">
+                <h5 class="item-info__title">
+                  45 anni di esperienza
+                </h5>
+                <p class="item-info__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                </p>
+              </div>
+            </div>
+        <div class="footer-info__column">
+              <div class="item-info">
+                <h5 class="item-info__title item-info__title_margin">
+                  NEWSLETTER
+                </h5>
+                <div class="form-item">
+                  <input placeholder="Nome e Cognome" type="text" class="form-item__input form-item__info_input">
+                  <input placeholder="Email" type="text" class="form-item__input form-item__info_input">
+                  <div class="checkbox-item">
+                    <input class="checkbox-item__input" type="checkbox" id="agree" name="personalData">
+                    <label class="checkbox-item__label" for="agree">Acconsento al trattamento dei dati</label>
+                  </div>
+                  <button class="btn-form" type="button">ISCRIVITI</button>
+                </div>
+              </div>
+            </div>
+      </div>
+      <div class="footer-contacts">
+        <div class="footer-contacts__item">
+          <div class="contact-item">
+            <span class="contact-item__text">MMLAMPADARI srl</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item__text">Via Feltrina 00</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item__text">31111 Pederobba  (TV)</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item__text">0423.123456</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item__text">info@mmlampadari.mm</span>
+          </div>
+          <div class="contact-item">
+            <span class="contact-item__text">P.IVA 04123456789</span>
+          </div>
+        </div>
+        <div class="footer-contacts__social">
+          <div class="social-item">
+            <a href="#" class="social-item__link">
+              <img class="social-item__icon" src="./images/facebook.png" alt="facebook">
+            </a>
+          </div>
+          <div class="social-item">
+            <a href="#" class="social-item__link">
+              <img class="social-item__icon" src="./images/instagram.png" alt="instagram">
+            </a>
+          </div>
+          <div class="social-item">
+            <a href="#" class="social-item__link">
+              <img class="social-item__icon" src="./images/pinterest.png" alt="pinterest">
+            </a>
+          </div>
+        </div>
+        <div class="footer-contacts__lang">
+          <div class="lang-item">
+            <a class="lang-item__btn" href="#" role="button">ITA</a>
+          </div>
+          <div class="lang-item">
+            <a class="lang-item__btn" href="#" role="button">ENG</a>
+          </div>
+          <div class="lang-item">
+            <a class="lang-item__btn" href="#" role="button">DEU</a>
+          </div>
+          <div class="lang-item">
+            <a class="lang-item__btn" href="#" role="button">PYC</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- build:js js/combined.js -->
+  <script src="./js/vendors.js"></script>
+  <script src="./js/main.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

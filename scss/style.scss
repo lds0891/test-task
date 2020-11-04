@@ -1,0 +1,26 @@
+@import "variables";
+@import "typography";
+@import "components/header";
+@import "components/modalWindow";
+@import "components/slider";
+@import "components/footer";
+@import "components/media";
+
+body {
+  margin: 0;
+  height: 100%;
+  background-color: $color-background-page;
+  &.lock {
+    overflow: hidden;
+  }
+  &.lock-menu {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-right: 15px;
+  padding-left: 15px;
+}

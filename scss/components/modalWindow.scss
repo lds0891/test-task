@@ -1,0 +1,101 @@
+.modal-window {
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: $background-modal-window;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  .modal-window__body {
+    position: relative;
+    top: 29.4%;
+    margin: 0 auto;
+    max-width: 440px;
+    max-height: 361px;
+    background: $color-background-page;
+    color: $color-text-light;
+    padding: 9px 78px 27px 76px;
+    border: 1px solid #cfcfd0;
+    .modal-window__title {
+      text-align: center;
+      font-family: $font-family-title;
+      font-size: 23.7px;
+      line-height: 23.7px;
+      font-weight: 700;
+      margin: 0 0 21px 0;
+      text-transform: uppercase;
+    }
+    //Btn close
+    .modal-btn__close {
+      position: absolute;
+      right: 13px;
+      top: 9px;
+      background: transparent;
+      width: 30px;
+      padding: 0;
+      height: 27px;
+      border: none;
+      cursor: pointer;
+      &:focus {
+        outline: none;
+      }
+      &:hover {
+        .modal-btn__close-icon {
+          background: $color-btn-hover;
+        }
+      }
+      .modal-btn__close-icon {
+        display: block;
+        position: relative;
+        height: 2px;
+        width: 29px;;
+        background: $color-btn-modal-close;
+        border-radius: 2px;
+        transform: rotate(0deg);
+        &:nth-child(1) {
+          transform: rotate(45deg);
+          top: 1px;
+        }
+        &:nth-child(2) {
+          transform: rotate(-45deg);
+          top: -1px;
+        }
+      }
+    }
+    .modal-window__inner {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+.modal-window__col {
+  display: flex;
+  flex-direction: column;
+  .modal-window__col-title {
+    font-family: $font-family-title;
+    font-size: 18px;
+    line-height: 23.7px;
+    font-weight: 700;
+    margin: 0 0 12px 0;
+    text-transform: uppercase;
+  }
+}
+.form-item_modal {
+  display: flex;
+  flex-direction: column;
+
+  .form-item__link {
+    font-family: $font-family-all;
+    font-size: 12px;
+    line-height: 24px;
+    font-weight: 400;
+    color: $color-text-grey;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-btn-hover;
+    }
+  }
+}

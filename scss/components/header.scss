@@ -1,0 +1,201 @@
+.header {
+  background: $color-background-page;
+  min-height: 130px;
+
+  .header__body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .header__logo {
+      padding-top: 14px;
+    }
+    .header__nav {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      justify-content: space-between;
+    }
+  }
+}
+//Modal
+.modal-btn {
+  padding-top: 1px;
+  margin-bottom: 52px;
+  cursor: pointer;
+  &:hover, &.active {
+    .modal-btn__open {
+      color: $color-hover;
+    }
+  }
+  .modal-btn__open {
+    font-family: $font-family-all;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: $color-text-light;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+
+    &:focus {
+      outline: none;
+    }
+  }
+  .modal-btn__icon {
+    margin-left: 7px;
+  }
+}
+//Nav menu
+.nav-menu {
+  list-style: none;
+  display: flex;
+  margin: 0 -2px 0 0;
+  padding: 0;
+
+  .nav-menu__item {
+    font-family: $font-family-all;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+    margin-left: 21px;
+    position: relative;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:hover, &:active, &.active {
+      .menu-drop {
+        transform: scaleY(1);
+      }
+      .nav-menu__link, .nav-menu__drop-name {
+        color: $color-hover;
+        font-weight: 700;
+      }
+    }
+    .nav-menu__link, .nav-menu__drop-name {
+      display: inline-block;
+      color: $color-text-light;
+      text-decoration: none;
+      transition: 0.5s all;
+      padding: 10px 0 10px 0;
+      cursor: pointer;
+      text-align: right;
+
+      &:before {
+        display: block;
+        content: attr(title);
+        font-weight: 700;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+      }
+    }
+  }
+}
+//Dropdown menu
+.menu-drop {
+  list-style: none;
+  font-size: 16px;
+  position: absolute;
+  top: 53px;
+  left: -12px;
+  z-index: 10;
+  transition: 0.5s ease-in-out;
+  transform: scaleY(0);
+  transform-origin: 0 0;
+  background: $color-background-page;
+  padding: 0;
+  max-width: 149px;
+
+  .menu-drop__item {
+    padding: 0 8px 0 9px;
+    &:first-child {
+      .menu-drop__link {
+        padding: 11px 7px 2px 7px;
+      }
+    }
+    &:last-child {
+      .menu-drop__link {
+        border: none;
+        padding-bottom: 10px;
+      }
+    }
+    &:hover, &:active, &.active {
+      .menu-drop__link {
+        color: $color-hover;
+        font-weight: 700;
+      }
+    }
+    .menu-drop__link {
+      display: block;
+      color: $color-text-light;
+      text-decoration: none;
+      transition: 0.5s all;
+      border-bottom: 1px solid $color-text-light;
+      padding: 2px 7px 2px 7px;
+      &:before {
+        display: block;
+        content: attr(title);
+        font-weight: 700;
+        height: 0;
+        overflow: hidden;
+        visibility: hidden;
+      }
+    }
+  }
+}
+//Button menu mobile
+.header__toogler {
+  display: none;
+
+  &:focus {
+    outline: none;
+  }
+
+  &.open {
+    background: $color-background-mobile-light;
+    .header__toogler-icon {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+        top: 8px;
+        left: 8px;
+        background: $color-background-mobile-dark;
+      }
+      &:nth-child(2) {
+        width: 0;
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 26px;
+        left: 9px;
+        background: $color-background-mobile-dark;
+      }
+    }
+  }
+  .header__toogler-icon {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 26px;
+    background: $color-background-mobile-dark;
+    border-radius: 2px;
+    left: 4px;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    &:nth-child(1) {
+      top: 8px;
+      transform-origin: left center;
+    }
+    &:nth-child(2) {
+      top: 17px;
+      transform-origin: left center;
+    }
+    &:nth-child(3) {
+      top: 26px;
+      transform-origin: left center;
+    }
+  }
+}
